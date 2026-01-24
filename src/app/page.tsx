@@ -14,7 +14,7 @@ export default async function Home() {
         <div className={styles.heroContent}>
           <h1 className={styles.hook}>
             San Francisco was a Refugee Camp. <br />
-            <span className="text-accent">This was its Art.</span>
+            <span className="text-accent">This is the Record.</span>
           </h1>
           <div className={styles.ctaContainer}>
             <Link href="#folder-biography" className={styles.button}>
