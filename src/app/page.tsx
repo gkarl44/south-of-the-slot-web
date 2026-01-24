@@ -1,66 +1,81 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import Link from 'next/link';
+import styles from './page.module.css';
+import { getSubstackPosts } from '@/lib/rss';
 
-export default function Home() {
+export default async function Home() {
+  const posts = await getSubstackPosts();
+  const recentEssays = posts.slice(0, 5); // Show top 5 recent
+
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>To get started, edit the page.tsx file.</h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <main className={styles.main}>
+      {/* 3.A The "Mural" Landing Page */}
+      <section className={styles.hero}>
+        <div className={styles.muralPlaceholder} aria-hidden="true" />
+        <div className={styles.heroContent}>
+          <h1 className={styles.hook}>
+            San Francisco was a Refugee Camp. <br />
+            <span className="text-accent">This was its Art.</span>
+          </h1>
+          <div className={styles.ctaContainer}>
+            <Link href="#folder-biography" className={styles.button}>
+              Read The Biography
+            </Link>
+            <Link href="#folder-essays" className={styles.button}>
+              Enter The Archive
+            </Link>
+          </div>
         </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      {/* 3.B The "Finding Aid" Navigation */}
+      <section className={`${styles.section} container`} id="archive">
+        <h2 className={styles.sectionHeader}>The Filing Cabinet</h2>
+
+        <div className={styles.fileCabinet}>
+          {/* Folder 01: The Biography */}
+          <div className={styles.folder} id="folder-biography">
+            <span className={styles.folderTab}>Folder 01</span>
+            <h3 className={styles.folderTitle}>The Biography</h3>
+            <p className={styles.folderMeta}>Chronological Chapters.</p>
+            <p className="font-body" style={{ marginTop: '1rem', color: '#ccc' }}>
+              Vol I: Format Pending. <br />
+              Explore the life of the artists who built SOMA.
+            </p>
+          </div>
+
+          {/* Folder 02: The Essays (Substack Content) */}
+          <div className={styles.folder} id="folder-essays">
+            <span className={styles.folderTab}>Folder 02</span>
+            <h3 className={styles.folderTitle}>The Essays</h3>
+            <p className={styles.folderMeta}>Theoretical works & Updates.</p>
+
+            <ul style={{ marginTop: '1rem', listStyle: 'none' }}>
+              {recentEssays.map((post) => (
+                <li key={post.guid} style={{ marginBottom: '1rem' }}>
+                  <a href={post.link} target="_blank" rel="noopener noreferrer"
+                    style={{ display: 'block', color: 'var(--foreground)', textDecoration: 'underline', textDecorationColor: '#444' }}>
+                    {post.title}
+                  </a>
+                  <span style={{ fontSize: '0.8rem', color: '#666' }}>
+                    {new Date(post.pubDate).toLocaleDateString()}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Folder 03: The Evidence */}
+          <div className={styles.folder} id="folder-evidence">
+            <span className={styles.folderTab}>Folder 03</span>
+            <h3 className={styles.folderTitle}>The Evidence</h3>
+            <p className={styles.folderMeta}>Scans, Letters, 1996 Disks.</p>
+            <p className="font-body" style={{ marginTop: '1rem', color: '#ccc' }}>
+              Access restricted. <br />
+              Digitization in progress.
+            </p>
+          </div>
         </div>
-      </main>
-    </div>
+      </section>
+    </main>
   );
 }
