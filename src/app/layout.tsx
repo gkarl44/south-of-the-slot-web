@@ -15,8 +15,33 @@ const courierPrime = Courier_Prime({
 })
 
 export const metadata: Metadata = {
-  title: 'SOUTHOFTHESLOT.ORG | The Prager/Arnett Archive',
-  description: 'The Digital Home of the Prager/Arnett Archive. "Industrial Noir meets Archival chic."',
+  title: 'SOUTHOFTHESLOT.ORG | The Record',
+  description: 'The Digital Home of the Prager/Arnett Archive. The Record of San Francisco\'s Leather Era (1964).',
+}
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'ArchiveComponent',
+  'name': 'South of the Slot',
+  'url': 'https://southoftheslot.org',
+  'description': 'The Record of San Francisco\'s SOMA Leather Era circa 1964.',
+  'mainEntity': {
+    '@type': 'Collection',
+    'name': 'The Prager/Arnett Archive',
+    'description': 'A collection of writings, sketches, and historical records detailing the "refugee camp" social structure of 1960s SOMA.',
+    'creator': [
+      {
+        '@type': 'Person',
+        'name': 'Robert Prager',
+        'jobTitle': 'Archivist'
+      },
+      {
+        '@type': 'Person',
+        'name': 'Chuck Arnett',
+        'jobTitle': 'Artist'
+      }
+    ]
+  }
 }
 
 export default function RootLayout({
@@ -27,6 +52,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${bebasNeue.variable} ${courierPrime.variable}`}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         {children}
       </body>
     </html>
