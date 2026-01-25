@@ -57,7 +57,7 @@ export default function Chapter1() {
                     </p>
 
                     <p>
-                        But I, ever the skeptic, dug deeper. In the age of digital archives, the "Bastard of Bogalusa" myth unraveled. A June 3, 1927 notice in the Washington Parish Era-Leader reported simply: "C.W. Arnett has applied for a license to marry Hazel H. Beard."
+                        However, a June 3, 1927 notice in the Washington Parish Era-Leader reported simply: "C.W. Arnett has applied for a license to marry Hazel H. Beard."
                     </p>
 
                     <p>

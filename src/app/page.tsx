@@ -35,7 +35,12 @@ export default async function Home() {
           {/* Folder 01: The Biography */}
           <div className={styles.folder} id="folder-biography">
             <span className={styles.folderTab}>Folder 01</span>
-            <h3 className={styles.folderTitle}>The Biography</h3>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
+              <h3 className={styles.folderTitle}>The Biography</h3>
+              <a href="https://southoftheslot.substack.com" target="_blank" className="text-accent text-xs hover:underline uppercase tracking-widest">
+                On Substack ↗
+              </a>
+            </div>
             <p className={styles.folderMeta}>Chronological Chapters.</p>
             <div className="font-body" style={{ marginTop: '1rem', color: '#ccc' }}>
               Vol I: The Life and Times of Chuck Arnett
@@ -58,18 +63,9 @@ export default async function Home() {
             <h3 className={styles.folderTitle}>The Essays</h3>
             <p className={styles.folderMeta}>Theoretical works & Updates.</p>
 
-            <p className="border-l-2 border-accent pl-4 italic text-gray-400">
-              Essays and theoretical works are published on our Substack.
+            <p className="font-body" style={{ marginTop: '1rem', color: '#666', fontStyle: 'italic' }}>
+              Coming soon.
             </p>
-            <a
-              href="https://southoftheslot.substack.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.button}
-              style={{ marginTop: '1rem', width: '100%', textAlign: 'center' }}
-            >
-              Read on Substack
-            </a>
           </div>
 
           {/* Folder 03: The Evidence */}
