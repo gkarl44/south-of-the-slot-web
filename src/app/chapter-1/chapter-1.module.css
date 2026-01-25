@@ -1,0 +1,91 @@
+.main {
+    min-height: 100vh;
+    background-color: var(--background);
+    color: var(--foreground);
+    padding-bottom: 5rem;
+}
+
+.nav {
+    padding: 1.5rem;
+    border-bottom: 1px solid #333;
+}
+
+.backLink {
+    color: var(--accent);
+    text-transform: uppercase;
+    font-family: var(--font-heading);
+    letter-spacing: 0.1em;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.2s ease;
+}
+
+.backLink:hover {
+    color: #fff;
+}
+
+.article {
+    max-width: 65ch;
+    margin: 0 auto;
+    padding: 4rem 1.5rem 0 1.5rem;
+    font-family: var(--font-body);
+    font-size: 1.125rem;
+    line-height: 1.7;
+}
+
+.header {
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.title {
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--accent);
+    line-height: 1;
+}
+
+.subtitle {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #888;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #333;
+    display: inline-block;
+}
+
+.chapterNum {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    color: #fff;
+}
+
+.content {
+    color: #dadada;
+}
+
+.content p {
+    margin-bottom: 1.5rem;
+    text-align: justify;
+}
+
+.footer {
+    margin-top: 5rem;
+    padding-top: 2.5rem;
+    border-top: 1px solid #333;
+    text-align: center;
+    font-size: 0.875rem;
+    color: #666;
+    font-family: var(--font-body);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+@media (min-width: 768px) {
+    .title {
+        font-size: 4rem;
+    }
+}

@@ -1,30 +1,33 @@
 import Link from 'next/link';
+import styles from './chapter-1.module.css';
 
 export default function Chapter1() {
     return (
-        <main className="min-h-screen bg-background text-foreground pb-20">
+        <main className={styles.main}>
             {/* Navigation */}
-            <nav className="p-6 border-b border-[#333]">
-                <Link href="/" className="text-accent hover:text-white uppercase font-heading tracking-widest no-underline transition-colors">
+            <nav className={styles.nav}>
+                <Link href="/" className={styles.backLink}>
                     ← Back to Archive
                 </Link>
             </nav>
 
             {/* Article Content */}
-            <article className="max-w-[65ch] mx-auto px-6 pt-16 font-body text-lg leading-relaxed">
+            <article className={styles.article}>
                 {/* Header */}
-                <header className="mb-12 text-center">
-                    <h1 className="font-heading text-5xl md:text-6xl mb-4 text-accent">
+                <header className={styles.header}>
+                    <h1 className={styles.title}>
                         The Life and Times of Chuck Arnett
                     </h1>
-                    <h2 className="text-sm md:text-base tracking-widest uppercase text-gray-500 mb-6 border-b border-gray-800 pb-6">
-                        Part I: The Deepest Part of the Deep South (1928–1950)
-                    </h2>
-                    <h3 className="font-heading text-3xl">1. The Nativity Thing</h3>
+                    <div style={{ textAlign: 'center' }}>
+                        <h2 className={styles.subtitle}>
+                            Part I: The Deepest Part of the Deep South (1928–1950)
+                        </h2>
+                    </div>
+                    <h3 className={styles.chapterNum}>1. The Nativity Thing</h3>
                 </header>
 
                 {/* Text Body */}
-                <div className="space-y-6 text-[#dadada]">
+                <div className={styles.content}>
                     <p>
                         "I can be a real bastard sometimes," Chuck Arnett used to boast to his friends in San Francisco, usually after a third hit of crystal, a mischievous, almost demonic glint in his eye. "But then, who has a better right to be one than me?"
                     </p>
@@ -84,7 +87,7 @@ export default function Chapter1() {
             </article>
 
             {/* Decorative Footer */}
-            <footer className="mt-20 pt-10 border-t border-[#333] text-center text-sm text-gray-600 font-body uppercase tracking-wider">
+            <footer className={styles.footer}>
                 <p>The Prager/Arnett Archive</p>
                 <p>South of the Slot © 2026</p>
             </footer>
