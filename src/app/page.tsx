@@ -37,7 +37,7 @@ export default async function Home() {
             <span className={styles.folderTab}>Folder 01</span>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
               <h3 className={styles.folderTitle}>The Biography</h3>
-              <a href="https://southoftheslot.substack.com" target="_blank" className="text-accent text-xs hover:underline uppercase tracking-widest">
+              <a href="https://pragerpapers.substack.com" target="_blank" className="text-accent text-xs hover:underline uppercase tracking-widest">
                 On Substack ↗
               </a>
             </div>
