@@ -29,20 +29,12 @@ export async function getSubstackPosts(): Promise<Post[]> {
         // Return empty array or mock data if feed fails (for development)
         return [
             {
-                title: "Example Essay: The Tool Box",
-                link: "#",
+                title: "Chapter 1: The Nativity Thing",
+                link: "https://southoftheslot.substack.com/p/chapter-1-the-nativity-thing", // Assumption, or keep generic
                 pubDate: new Date().toUTCString(),
-                content: "This is a placeholder for a Substack essay...",
-                contentSnippet: "Snippet of the essay...",
+                content: "The Life and Times of Chuck Arnett...",
+                contentSnippet: "I can be a real bastard sometimes...",
                 guid: "1",
-            },
-            {
-                title: "Example Essay: South of the Slot",
-                link: "#",
-                pubDate: new Date().toUTCString(),
-                content: "Another placeholder...",
-                contentSnippet: "Snippet...",
-                guid: "2",
             }
         ];
     }

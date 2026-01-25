@@ -37,10 +37,19 @@ export default async function Home() {
             <span className={styles.folderTab}>Folder 01</span>
             <h3 className={styles.folderTitle}>The Biography</h3>
             <p className={styles.folderMeta}>Chronological Chapters.</p>
-            <p className="font-body" style={{ marginTop: '1rem', color: '#ccc' }}>
-              Vol I: Format Pending. <br />
-              Explore the life of the artists who built SOMA.
-            </p>
+            <div className="font-body" style={{ marginTop: '1rem', color: '#ccc' }}>
+              Vol I: The Life and Times of Chuck Arnett
+              <ul style={{ paddingLeft: '1rem', marginTop: '0.5rem', listStyle: 'none' }}>
+                <li style={{ marginBottom: '0.5rem' }}>
+                  <a href="/chapter_1.txt" target="_blank" className={styles.folderLink}>
+                    Chapter 1: The Nativity Thing
+                  </a>
+                  <span style={{ display: 'block', fontSize: '0.8rem', color: '#666' }}>
+                    Part I: The Deepest Part of the Deep South (1928–1950)
+                  </span>
+                </li>
+              </ul>
+            </div>
           </div>
 
           {/* Folder 02: The Essays (Substack Content) */}

@@ -19,6 +19,7 @@ A chronological account of the lives of the key figures who built SOMA.
 Theoretical works and contemporary analysis of the era.
 - Source: [South of the Slot Substack](https://southoftheslot.substack.com)
 - Format: Episodic essays analyzing specific events, artworks, or social dynamics.
+- **Chapter 1**: [Text Version](/chapter_1.txt)
 
 ### 3. The Evidence (Folder 03)
 Primary source materials (digitization in progress).
