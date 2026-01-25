@@ -45,7 +45,7 @@ export default function Chapter1() {
                     </p>
 
                     <p>
-                        "What kind of party was it?" Prager once asked Bill Tellman, seeking to flesh out the details of this family lore decades later.
+                        "What kind of party was it?" I once asked Bill Tellman, seeking to flesh out the details of this family lore decades later.
                     </p>
 
                     <p>
@@ -57,7 +57,7 @@ export default function Chapter1() {
                     </p>
 
                     <p>
-                        But Prager, ever the skeptic, dug deeper. In the age of digital archives, the "Bastard of Bogalusa" myth unraveled. A June 3, 1927 notice in the Washington Parish Era-Leader reported simply: "C.W. Arnett has applied for a license to marry Hazel H. Beard."
+                        But I, ever the skeptic, dug deeper. In the age of digital archives, the "Bastard of Bogalusa" myth unraveled. A June 3, 1927 notice in the Washington Parish Era-Leader reported simply: "C.W. Arnett has applied for a license to marry Hazel H. Beard."
                     </p>
 
                     <p>

@@ -58,19 +58,18 @@ export default async function Home() {
             <h3 className={styles.folderTitle}>The Essays</h3>
             <p className={styles.folderMeta}>Theoretical works & Updates.</p>
 
-            <ul style={{ marginTop: '1rem', listStyle: 'none' }}>
-              {recentEssays.map((post) => (
-                <li key={post.guid} style={{ marginBottom: '1rem' }}>
-                  <a href={post.link} target="_blank" rel="noopener noreferrer"
-                    style={{ display: 'block', color: 'var(--foreground)', textDecoration: 'underline', textDecorationColor: '#444' }}>
-                    {post.title}
-                  </a>
-                  <span style={{ fontSize: '0.8rem', color: '#666' }}>
-                    {new Date(post.pubDate).toLocaleDateString()}
-                  </span>
-                </li>
-              ))}
-            </ul>
+            <p className="border-l-2 border-accent pl-4 italic text-gray-400">
+              Essays and theoretical works are published on our Substack.
+            </p>
+            <a
+              href="https://southoftheslot.substack.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.button}
+              style={{ marginTop: '1rem', width: '100%', textAlign: 'center' }}
+            >
+              Read on Substack
+            </a>
           </div>
 
           {/* Folder 03: The Evidence */}
