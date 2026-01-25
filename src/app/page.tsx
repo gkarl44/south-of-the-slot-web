@@ -41,7 +41,7 @@ export default async function Home() {
               Vol I: The Life and Times of Chuck Arnett
               <ul style={{ paddingLeft: '1rem', marginTop: '0.5rem', listStyle: 'none' }}>
                 <li style={{ marginBottom: '0.5rem' }}>
-                  <a href="/chapter_1.txt" target="_blank" className={styles.folderLink}>
+                  <a href="/chapter-1" className={styles.folderLink}>
                     Chapter 1: The Nativity Thing
                   </a>
                   <span style={{ display: 'block', fontSize: '0.8rem', color: '#666' }}>
