@@ -1,8 +1,20 @@
-The Life and Times of Chuck Arnett
+---
+title: "Chapter 1: The Nativity Thing"
+series: "The Life and Times of Chuck Arnett"
+part: "Part I: The Deepest Part of the Deep South (1928–1950)"
+slug: "chapter-1-the-nativity-thing"
+date: 2026-01-25
+author: "Robert Arnett"
+category: "biography"
+status: "published"
+description: "The opening chapter of the Chuck Arnett biography, debating the myths of his origin."
+---
 
-Part I: The Deepest Part of the Deep South (1928–1950)
+# The Life and Times of Chuck Arnett
 
-1. The Nativity Thing
+## Part I: The Deepest Part of the Deep South (1928–1950)
+
+### 1. The Nativity Thing
 
 "I can be a real bastard sometimes," Chuck Arnett used to boast to his friends in San Francisco, usually after a third hit of crystal, a mischievous, almost demonic glint in his eye. "But then, who has a better right to be one than me?"
 

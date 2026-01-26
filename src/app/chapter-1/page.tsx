@@ -10,23 +10,65 @@ export default function Chapter1() {
         "dateModified": "2026-01-25",
         "author": {
             "@type": "Person",
-            "name": "Robert Prager"
+            "name": "Robert Prager",
+            "url": "https://southoftheslot.org/about"
         },
         "publisher": {
             "@type": "Organization",
-            "name": "Prager Papers"
+            "name": "Prager Papers",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://southoftheslot.org/logo.png"
+            }
         },
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https://southoftheslot.org/chapter-1"
         },
-        "description": "Part I of The Life and Times of Chuck Arnett. A reconstruction of Arnett's early life in the Deep South (1928–1950), based on archival records and interviews.",
+        "description": "The opening chapter of the Chuck Arnett biography, debating the myths of his origin. Part of 'The Life and Times of Chuck Arnett'.",
+        "articleSection": "Part I: The Deepest Part of the Deep South (1928–1950)",
+        "inLanguage": "en-US",
         "keywords": [
             "Chuck Arnett",
             "San Francisco Leather History",
             "SOMA",
-            "The Tool Box",
-            "Robert Prager"
+            "New Orleans",
+            "Bogalusa",
+            "Biography",
+            "LGBTQ History"
+        ],
+        "mentions": [
+            {
+                "@type": "Person",
+                "name": "Chuck Arnett",
+                "alternateName": "Charles William Arnett Junior",
+                "birthDate": "1928-02-15",
+                "birthPlace": {
+                    "@type": "Place",
+                    "name": "Bogalusa, Louisiana"
+                }
+            },
+            {
+                "@type": "Person",
+                "name": "Hazel Hillary Beard",
+                "description": "Mother of Chuck Arnett"
+            },
+            {
+                "@type": "Person",
+                "name": "Bill Tellman",
+                "description": "Friend of Chuck Arnett"
+            }
+        ],
+        "temporalCoverage": "1928-1950",
+        "spatialCoverage": [
+            {
+                "@type": "Place",
+                "name": "New Orleans"
+            },
+            {
+                "@type": "Place",
+                "name": "Bogalusa"
+            }
         ]
     };
 
@@ -78,7 +120,7 @@ export default function Chapter1() {
                     </p>
 
                     <p>
-                        "What kind of party was it?" I once asked Bill Tellman, seeking to flesh out the details of this family lore decades later.
+                        "What kind of party was it?" The question was put to Bill Tellman decades later, in an effort to flesh out the details of this family lore.
                     </p>
 
                     <p>
@@ -90,7 +132,7 @@ export default function Chapter1() {
                     </p>
 
                     <p>
-                        However, a June 3, 1927 notice in the Washington Parish Era-Leader reported simply: "C.W. Arnett has applied for a license to marry Hazel H. Beard."
+                        In the age of digital archives, however, the "Bastard of Bogalusa" myth unraveled. A June 3, 1927 notice in the Washington Parish Era-Leader reported simply: "C.W. Arnett has applied for a license to marry Hazel H. Beard."
                     </p>
 
                     <p>
