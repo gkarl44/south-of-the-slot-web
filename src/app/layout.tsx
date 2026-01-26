@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Bebas_Neue, Courier_Prime } from 'next/font/google'
 import './globals.css'
+import ArchiveChat from '@/components/ArchiveChat'
 
 const bebasNeue = Bebas_Neue({
   weight: '400',
@@ -57,6 +58,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
         {children}
+        <ArchiveChat />
       </body>
     </html>
   )
