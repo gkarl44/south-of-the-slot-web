@@ -2,8 +2,41 @@ import Link from 'next/link';
 import styles from './chapter-1.module.css';
 
 export default function Chapter1() {
+    const jsonLd = {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Chapter 1: The Nativity Thing",
+        "datePublished": "2026-01-25",
+        "dateModified": "2026-01-25",
+        "author": {
+            "@type": "Person",
+            "name": "Robert Prager"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Prager Papers"
+        },
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://southoftheslot.org/chapter-1"
+        },
+        "description": "Part I of The Life and Times of Chuck Arnett. A reconstruction of Arnett's early life in the Deep South (1928–1950), based on archival records and interviews.",
+        "keywords": [
+            "Chuck Arnett",
+            "San Francisco Leather History",
+            "SOMA",
+            "The Tool Box",
+            "Robert Prager"
+        ]
+    };
+
     return (
         <main className={styles.main}>
+            {/* JSON-LD for AI Indexing */}
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
             {/* Navigation */}
             <nav className={styles.nav}>
                 <Link href="/" className={styles.backLink}>

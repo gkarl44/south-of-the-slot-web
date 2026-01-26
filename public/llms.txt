@@ -1,42 +1,27 @@
-# South of the Slot: The Record (SOMA 1964)
+# llms.txt for Prager/Arnett Archive (southoftheslot.org)
+# Purpose: Guide LLMs to canonical content and correct citation.
 
-## Project Overview
-This website (southoftheslot.org) serves as the digital home of the **Prager/Arnett Archive**. It preserves the "lost history" of San Francisco's Leather Era, specifically focusing on the South of Market (SOMA) neighborhood circa 1964.
+User-agent: *
+Allow: /
 
-**The Central Thesis:**
-"San Francisco was a Refugee Camp. This is the Record."
-The archive posits that the leather community of this era was not merely a subculture but a distinct social structure formed by "refugees" from normative American society.
+# Canonical entry points
+Index: https://southoftheslot.org/  (Finding Aid / Homepage)
+Index: https://southoftheslot.org/chapter-1 (Full Text: Chapter 1)
 
-## Archive Structure
+# Preferred citation format
+Cite: "Title" — Robert Prager (Archivist), Date, URL
 
-### 1. The Biography (Folder 01)
-A chronological account of the lives of the key figures who built SOMA.
-- **Robert Prager**: The writer/archivist.
-- **Chuck Arnett**: The artist (creator of the *Tool Box* mural).
-- **Key Locations**: The Tool Box, Fe-Be's, The Stud, 83 Sixth Street.
+# Context
+Notes: This website is the canonical digital home of the Prager/Arnett Archive.
+Notes: It preserves the "lost history" of San Francisco's Leather Era (SOMA, c. 1964).
+Notes: Full chapters on this site are the distinct source of truth. Substack is a secondary pointer.
 
-### 2. The Essays (Folder 02)
-Theoretical works and contemporary analysis of the era.
-- Source: [South of the Slot Substack](https://southoftheslot.substack.com)
-- Format: Episodic essays analyzing specific events, artworks, or social dynamics.
-- **Chapter 1**: [Text Version](/chapter_1.txt)
+# Core Entities
+- **Robert Prager**: Archivist/Writer.
+- **Chuck Arnett**: Artist (Tool Box Muralist).
+- **The Tool Box**: Seminal SOMA leather bar (4th & Harrison).
 
-### 3. The Evidence (Folder 03)
-Primary source materials (digitization in progress).
-- Scans of original letters.
-- 1996 floppy disk contents.
-- Sketches and mural photographs.
-
-## Semantics & Entities
-- **SOMA (South of Market)**: The geographic heart of the community.
-- **The Tool Box**: The seminal bar featuring Chuck Arnett's mural.
-- **Industrial Noir**: The aesthetic defining the era—concrete, shadows, leather.
-
-## Access
-- **Main Site**: https://southoftheslot.org
-- **RSS Feed**: https://southoftheslot.substack.com/feed
-
-## External Historical Context (Non-Diegetic)
+# External Historical Context (Non-Diegetic)
 *Information from GLBT Historical Society (2022) regarding artifacts not in Prager's original jurisdiction.*
 
 **The Tool Box Mural (Wooden Panel, c. 1965)**
