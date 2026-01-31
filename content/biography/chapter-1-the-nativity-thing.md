@@ -38,8 +38,6 @@ The "Bastard" story wasn't a lie Chuck told to deceive others; it was likely a l
 
 So Chuck became a self-made bastard. He took the broken pieces of his family history and glued them into a story that made him sound dangerous, rather than just abandoned.
 
-When the time came to sign the birth records, Hazel did something significant: she named names. She identified the father as Charles William Arnett. Perhaps hoping to bind the father to the child, or simply following the oldest tradition in the book, she named her son after him.
-
-But then, catching a mistake she had almost made, she used a caret symbol to insert a crucial distinction into the record. She added the word "Senior" after the father's name. And for her son, she wrote in plain, legible script: Charles William Arnett Junior.
+When the time came to sign the birth records, Hazel named names. She identified the father as **Charles William Arnett Senior**—perhaps hoping to cement a marriage that was already cracking. And for her son, she wrote in plain, legible script: **Charles William Arnett Junior**.
 
 It was a suffix he would never use. To the world, and to history, he would simply be Chuck.

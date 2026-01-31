@@ -1,0 +1,107 @@
+.main {
+    min-height: 100vh;
+    background-color: var(--background);
+    color: var(--foreground);
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.nav {
+    margin-bottom: 3rem;
+}
+
+.backLink {
+    color: #666;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.title {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    color: #888;
+    font-family: var(--font-body);
+}
+
+.searchBox {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.input {
+    flex: 1;
+    background: #111;
+    border: 1px solid #333;
+    padding: 1rem;
+    color: #fff;
+    font-family: var(--font-body);
+    font-size: 1rem;
+}
+
+.button {
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    padding: 0 2rem;
+    font-family: var(--font-heading);
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.button:hover {
+    background: #c0392b;
+    /* Darker red */
+}
+
+.resultCard {
+    background: #111;
+    border: 1px solid #333;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.cardHeader {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.sourceType {
+    color: var(--accent);
+    font-weight: bold;
+}
+
+.filename {
+    color: #666;
+}
+
+.snippet {
+    color: #ccc;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.emptyState {
+    text-align: center;
+    color: #666;
+    margin-top: 3rem;
+}

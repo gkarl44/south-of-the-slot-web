@@ -1,10 +1,14 @@
 import Link from 'next/link';
 import styles from './page.module.css';
 import { getSubstackPosts } from '@/lib/rss';
+import { getAllPosts } from '@/lib/api';
 
 export default async function Home() {
   const posts = await getSubstackPosts();
-  const recentEssays = posts.slice(0, 5); // Show top 5 recent
+  const recentEssays = posts.slice(0, 5);
+
+  // Fetch chapters
+  const chapters = getAllPosts(['title', 'slug', 'part']);
 
   return (
     <main className={styles.main}>
@@ -22,6 +26,9 @@ export default async function Home() {
             </Link>
             <Link href="#folder-essays" className={styles.button}>
               Enter The Archive
+            </Link>
+            <Link href="/timeline" className={styles.button}>
+              View Timeline
             </Link>
           </div>
         </div>
@@ -44,15 +51,15 @@ export default async function Home() {
             <p className={styles.folderMeta}>Chronological Chapters.</p>
             <div className="font-body" style={{ marginTop: '1rem', color: '#ccc' }}>
               Vol I: The Life and Times of Chuck Arnett
-              <ul style={{ paddingLeft: '1rem', marginTop: '0.5rem', listStyle: 'none' }}>
-                <li style={{ marginBottom: '0.5rem' }}>
-                  <a href="/chapter-1" className={styles.folderLink}>
-                    Chapter 1: The Nativity Thing
-                  </a>
-                  <span style={{ display: 'block', fontSize: '0.8rem', color: '#666' }}>
-                    Part I: The Deepest Part of the Deep South (1928–1950)
-                  </span>
-                </li>
+              <ul style={{ paddingLeft: '0', marginTop: '0.5rem', listStyle: 'none' }}>
+                {chapters.map((chapter) => (
+                  <li key={chapter.slug} style={{ marginBottom: '0.8rem' }}>
+                    <Link href={`/biography/${chapter.slug}`} className={styles.folderLink}>
+                      <span style={{ color: '#fff', borderBottom: '1px solid #444' }}>{chapter.title}</span>
+                    </Link>
+                    {/* Optional: Limit metadata to keep list clean, or show Part on hover? */}
+                  </li>
+                ))}
               </ul>
             </div>
           </div>
@@ -63,9 +70,21 @@ export default async function Home() {
             <h3 className={styles.folderTitle}>The Essays</h3>
             <p className={styles.folderMeta}>Theoretical works & Updates.</p>
 
-            <p className="font-body" style={{ marginTop: '1rem', color: '#666', fontStyle: 'italic' }}>
-              Coming soon.
-            </p>
+            {posts.length > 0 ? (
+              <ul style={{ paddingLeft: '0', marginTop: '0.5rem', listStyle: 'none' }}>
+                {recentEssays.map(post => (
+                  <li key={post.id} style={{ marginBottom: '0.8rem' }}>
+                    <a href={post.link} target="_blank" className={styles.folderLink}>
+                      <span style={{ color: '#fff' }}>{post.title}</span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            ) : (
+              <p className="font-body" style={{ marginTop: '1rem', color: '#666', fontStyle: 'italic' }}>
+                Coming soon.
+              </p>
+            )}
           </div>
 
           {/* Folder 03: The Evidence */}
