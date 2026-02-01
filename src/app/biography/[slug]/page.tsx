@@ -82,22 +82,7 @@ export default async function Post(props: { params: Promise<{ slug: string }> })
                 {/* Render Markdown Content */}
                 <div className={styles.content} dangerouslySetInnerHTML={{ __html: contentHtml }} />
 
-                {/* FEATURE #3: Raw vs Cooked Link */}
-                <div style={{ marginTop: '4rem', padding: '2rem', borderTop: '1px solid #333', textAlign: 'center' }}>
-                    <p style={{ fontSize: '0.9rem', color: '#888', marginBottom: '1rem' }}>
-                        Establish verifiability by searching the original binders.
-                    </p>
-                    {/* Note: This is a placeholder link. Eventually this could go to a Search Page. 
-                        For now, we can link to the Timeline or Homepage, 
-                        BUT the request was to link to "Raw Archive Search".
-                        Since we don't have a frontend search page yet, 
-                        I will create a button that opens a "Search Modal" or links to a /search page.
-                        For this MVP, I'll link to a new /search page passing the keywords.
-                    */}
-                    <Link href={`/search?q=${encodeURIComponent(keywords)}`} className={styles.backLink} style={{ fontSize: '0.8rem' }}>
-                        View Source Documents
-                    </Link>
-                </div>
+
 
             </article>
             <footer className={styles.footer}>

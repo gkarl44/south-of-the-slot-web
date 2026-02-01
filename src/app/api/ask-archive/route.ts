@@ -17,6 +17,8 @@ interface ArchiveItem {
     };
 }
 
+import zlib from 'zlib';
+
 // Load data once in memory (server-side only)
 // Note: In Next.js App Router, this will likely be re-executed on cold starts,
 // but that's acceptable for this scale (~1000 items).
@@ -26,9 +28,11 @@ let archiveCache: ArchiveItem[] | null = null;
 function getArchiveData(): ArchiveItem[] {
     if (archiveCache) return archiveCache;
 
-    const dataPath = path.join(process.cwd(), 'data', 'archive.json');
+    const dataPath = path.join(process.cwd(), 'data', 'archive.json.gz');
     try {
-        const fileContents = fs.readFileSync(dataPath, 'utf8');
+        const fileBuffer = fs.readFileSync(dataPath);
+        const decompressed = zlib.gunzipSync(fileBuffer);
+        const fileContents = decompressed.toString('utf8');
         archiveCache = JSON.parse(fileContents);
         return archiveCache || [];
     } catch (error) {
