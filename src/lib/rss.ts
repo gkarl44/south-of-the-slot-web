@@ -27,15 +27,6 @@ export async function getSubstackPosts(): Promise<Post[]> {
     } catch (error) {
         console.error('Error fetching Substack feed:', error);
         // Return empty array or mock data if feed fails (for development)
-        return [
-            {
-                title: "Chapter 1: The Nativity Thing",
-                link: "https://southoftheslot.substack.com/p/chapter-1-the-nativity-thing", // Assumption, or keep generic
-                pubDate: new Date().toUTCString(),
-                content: "The Life and Times of Chuck Arnett...",
-                contentSnippet: "I can be a real bastard sometimes...",
-                guid: "1",
-            }
-        ];
+        return [];
     }
 }

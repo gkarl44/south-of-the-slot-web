@@ -1,67 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
-  --background: #1a1a1a; /* Dark Grey */
-  --foreground: #f0f0f0; /* Off-White / Bone */
-  --accent: #ff5f15; /* Safety Orange */
-  
+  --background: #111111;
+  --foreground: #f0f0f0;
+  --accent: #ff5f15;
+
   --font-heading: var(--font-bebas);
   --font-body: var(--font-courier);
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-neutral-900 text-neutral-100 antialiased font-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-sans font-normal uppercase tracking-wide;
+  }
 }
 
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-  background-color: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-body), monospace;
-  -webkit-font-smoothing: antialiased;
-}
+@layer utilities {
+  .text-accent {
+    color: var(--accent);
+  }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-heading), sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  font-weight: 400; /* Bebas only has 400 */
-}
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
 
-a {
-  color: var(--accent);
-  text-decoration: none;
-  border-bottom: 1px solid transparent;
-  transition: border-color 0.2s ease;
-}
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+  }
 
-a:hover {
-  border-bottom: 1px solid var(--accent);
-}
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 8px;
+  }
 
-/* Utilities */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
-}
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: #1a1a1a;
+  }
 
-.text-accent {
-  color: var(--accent);
-}
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 4px;
+  }
 
-.font-heading {
-  font-family: var(--font-heading);
-}
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
 
-.font-body {
-  font-family: var(--font-body);
-}
+  .blink-animation {
+    animation: blink 2s infinite;
+  }
 
-/* Layout Utilities */
-.grid {
-  display: grid;
-  gap: 1rem;
+  @keyframes blink {
+    0% {
+      opacity: 1;
+    }
+
+    50% {
+      opacity: 0.4;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
 }

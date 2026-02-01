@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
+import { Analytics } from '@vercel/analytics/react'
 import { Bebas_Neue, Courier_Prime } from 'next/font/google'
 import './globals.css'
-import ArchiveChat from '@/components/ArchiveChat'
 
 const bebasNeue = Bebas_Neue({
   weight: '400',
@@ -16,7 +16,7 @@ const courierPrime = Courier_Prime({
 })
 
 export const metadata: Metadata = {
-  title: 'SOUTHOFTHESLOT.ORG | The Record',
+  title: 'The Writings of Robert Prager',
   description: 'The Digital Home of the Prager/Arnett Archive. The Record of San Francisco\'s Leather Era (1964).',
 }
 
@@ -34,7 +34,7 @@ const jsonLd = {
       {
         '@type': 'Person',
         'name': 'Robert Prager',
-        'jobTitle': 'Archivist'
+        'jobTitle': ['Writer', 'Researcher']
       },
       {
         '@type': 'Person',
@@ -58,7 +58,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
         {children}
-        <ArchiveChat />
+        <Analytics />
       </body>
     </html>
   )
