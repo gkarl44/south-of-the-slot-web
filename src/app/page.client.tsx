@@ -16,6 +16,7 @@ interface Chapter {
     title: string;
     slug: string;
     part?: string;
+    [key: string]: string | undefined;
 }
 
 interface HomeProps {
