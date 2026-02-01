@@ -8,5 +8,5 @@ export default async function Home() {
   // Fetch chapters
   const chapters = getAllPosts(['title', 'slug', 'part']);
 
-  return <HomeClient posts={posts} chapters={chapters} />;
+  return <HomeClient posts={posts} chapters={chapters as any} />;
 }
