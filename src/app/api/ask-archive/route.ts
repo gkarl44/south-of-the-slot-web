@@ -28,12 +28,22 @@ let archiveCache: ArchiveItem[] | null = null;
 function getArchiveData(): ArchiveItem[] {
     if (archiveCache) return archiveCache;
 
-    const dataPath = path.join(process.cwd(), 'data', 'archive.json.gz');
+    const gzPath = path.join(process.cwd(), 'data', 'archive.json.gz');
+    const jsonPath = path.join(process.cwd(), 'data', 'archive.json');
+
     try {
-        const fileBuffer = fs.readFileSync(dataPath);
-        const decompressed = zlib.gunzipSync(fileBuffer);
-        const fileContents = decompressed.toString('utf8');
-        archiveCache = JSON.parse(fileContents);
+        if (fs.existsSync(gzPath)) {
+            const fileBuffer = fs.readFileSync(gzPath);
+            const decompressed = zlib.gunzipSync(fileBuffer);
+            const fileContents = decompressed.toString('utf8');
+            archiveCache = JSON.parse(fileContents);
+        } else if (fs.existsSync(jsonPath)) {
+            const fileContents = fs.readFileSync(jsonPath, 'utf8');
+            archiveCache = JSON.parse(fileContents);
+        } else {
+            return [];
+        }
+
         return archiveCache || [];
     } catch (error) {
         console.error('Failed to load archive data:', error);
